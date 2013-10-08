@@ -11,7 +11,10 @@ let g:airline#extensions#tabline#buffer_nr_show = 1
 
 " Visual settings
 set number 		" Show row numbers
+set cursorline		" Highlight current line
 colorscheme jellybeans	" Default colorscheme jellybeans
 
 " Keyboard shortcuts
 nnoremap ; : " remaps : to ;
+let mapleader = ','
+map <silent> <leader>V :source ~/.vimrc<CR>:filetype detect<CR>:exe ":echo 'vimrc reloaded'"<CR>
