@@ -16,7 +16,12 @@ def link_file(original_filename, symlink_filename)
   end
   ln_s original_path, symlink_path, :verbose => true
 end
-
+def step(description) 
+  description = "-- #{description} " 
+  description = description.ljust(80, '-') 
+  puts 
+  puts "\e[32m#{description}\e[0m" 
+end
 desc 'Install these config files.'
 task :default do
   step 'symlink'
