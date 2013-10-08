@@ -12,9 +12,12 @@ let g:airline#extensions#tabline#buffer_nr_show = 1
 " Visual settings
 set number 		" Show row numbers
 set cursorline		" Highlight current line
+set gfn=Inconsolata-dz\ for\ Powerline:h11
 colorscheme jellybeans	" Default colorscheme jellybeans
 
 " Keyboard shortcuts
-nnoremap ; : " remaps : to ;
 let mapleader = ','
+nnoremap ; : " remaps : to ;
 map <silent> <leader>V :source ~/.vimrc<CR>:filetype detect<CR>:exe ":echo 'vimrc reloaded'"<CR>
+
+set laststatus=2
