@@ -19,10 +19,17 @@ set number 		" Show row numbers
 set cursorline		" Highlight current line
 set gfn=Inconsolata-dz\ for\ Powerline:h11
 colorscheme jellybeans	" Default colorscheme jellybeans
+set laststatus=2	" Always show statusline
+set noshowmode		" Hide the default mode text below statusline
+set guioptions+=c	" no popup messages
+set guioptions-=L	" no left scrollbar
+set guioptions-=r	" no right scrollbar
+set guioptions-=R
 
 " Keyboard shortcuts
 let mapleader = ','
+nnoremap n nzzzv	" Center searches 
+nnoremap N Nzzzv
 nnoremap ; : " remaps : to ;
 map <silent> <leader>V :source ~/.vimrc<CR>:filetype detect<CR>:exe ":echo 'vimrc reloaded'"<CR>
 
-set laststatus=2

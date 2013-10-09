@@ -1,0 +1,13 @@
+[submodule "vim/bundle/jellybeans"]
+  path = vim/bundle/jellybeans
+  url = git://github.com/nanotech/jellybeans.git
+[submodule "vim/bundle/airline"]
+  path = vim/bundle/airline
+  url = git://github.com/bling/vim-airline.git
+[submodule "vim/bundle/ctrlp"]
+  path = vim/bundle/ctrlp
+  url = git://github.com/kien/ctrlp.vim.git
+[submodule "vim/bundle/syntastic"]
+  path = vim/bundle/syntastic
+  url = git://github.com/scrooloose/syntastic.git
+
