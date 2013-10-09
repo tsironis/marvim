@@ -11,6 +11,7 @@ let g:airline_powerline_fonts = 1
 set smartcase 		" case-sensitive search if any caps
 set softtabstop=2 	" insert mode tab and backspace use 2 spaces
 set tabstop=8 		" actual tabs occupy 8 characters
+set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*.pyc,*/nodemodules " ignores misc. files
 
 " Visual settings
 set number 		" Show row numbers
@@ -34,4 +35,4 @@ map <silent> <leader>V :source ~/.vimrc<CR>:filetype detect<CR>:exe ":echo 'vimr
 " Swap settings
 set directory-=.
 
-let g:miniBufExplStatusLineText = "-Skataaa-"
+let g:miniBufExplStatusLineText = ""
