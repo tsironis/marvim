@@ -33,3 +33,6 @@ nnoremap N Nzzzv
 nnoremap ; : " remaps : to ;
 map <silent> <leader>V :source ~/.vimrc<CR>:filetype detect<CR>:exe ":echo 'vimrc reloaded'"<CR>
 
+" Swap & backup settings
+set backupdir=/var/tmp/marvim//
+set directory=/var/tmp/marvim//
