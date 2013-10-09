@@ -17,7 +17,6 @@ set number 		" Show row numbers
 set cursorline		" Highlight current line
 set gfn=Inconsolata-dz\ for\ Powerline:h11
 colorscheme jellybeans	" Default colorscheme jellybeans
-set laststatus=2	" Always show statusline
 set noshowmode		" Hide the default mode text below statusline
 set guioptions+=c	" supresses popup messages in the statusline (macvim)
 set guioptions-=L	" no left scrollbar
@@ -26,10 +25,13 @@ set guioptions-=R
 
 " Keyboard shortcuts
 let mapleader = ','
-nnoremap n nzzzv	" Center searches 
+nnoremap n nzzzv
 nnoremap N Nzzzv
-nnoremap ; : " remaps : to ;
+nnoremap <C-a> :b
+nnoremap ; :
 map <silent> <leader>V :source ~/.vimrc<CR>:filetype detect<CR>:exe ":echo 'vimrc reloaded'"<CR>
 
 " Swap settings
 set directory-=.
+
+let g:miniBufExplStatusLineText = "-Skataaa-"
