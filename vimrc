@@ -8,6 +8,9 @@ filetype plugin indent on
 let g:airline_powerline_fonts = 1
 
 " Editing preferences
+set autoread		" reload files when changed on disk, i.e. via `git checkout` 
+set encoding=utf-8	" encoding preference
+set expandtab		" expand tabs to spaces
 set smartcase 		" case-sensitive search if any caps
 set softtabstop=2 	" insert mode tab and backspace use 2 spaces
 set tabstop=8 		" actual tabs occupy 8 characters
@@ -24,6 +27,8 @@ set gfn=Inconsolata-dz\ for\ Powerline:h11
 colorscheme jellybeans	" Default colorscheme jellybeans
 set noshowmode		" Hide the default mode text below statusline
 set laststatus=2
+set list		" show trailing whitespace
+set listchars=tab:▸\ ,trail:·,extends:❯,precedes:❮
 set guioptions+=c	" supresses popup messages in the statusline (macvim)
 set guioptions-=L	" no left scrollbar
 set guioptions-=r	" no right scrollbar
@@ -42,3 +47,6 @@ map <silent> <leader>V :source ~/.vimrc<CR>:filetype detect<CR>:exe ":echo 'vimr
 set directory-=.
 
 let g:miniBufExplStatusLineText = ""
+
+" Plugin settings
+let g:ctrlp_match_window = 'max:20'
