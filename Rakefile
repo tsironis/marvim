@@ -27,4 +27,5 @@ task :default do
   step 'symlink'
   link_file 'vim'                   , '~/.vim'
   link_file 'vimrc'                 , '~/.vimrc'
+  link_file 'vimrc.bundles'         , '~/.vimrc.bundles'
 end

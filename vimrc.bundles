@@ -1,0 +1,7 @@
+Bundle 'bling/vim-airline'
+Bundle 'kien/ctrlp.vim'
+Bundle 'fholgado/minibufexpl.vim'
+Bundle 'tpope/vim-surround'
+Bundle 'nanotech/jellybeans.vim'
+Bundle 'terryma/vim-multiple-cursors'
+Bundle 'scrooloose/syntastic'

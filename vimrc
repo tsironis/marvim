@@ -1,4 +1,13 @@
-execute pathogen#infect()
+filetype on " without this vim emits a zero exit status, later, because of :ft off
+filetype off
+set rtp+=~/.vim/bundle/vundle/
+call vundle#rc()
+Bundle 'gmarik/vundle'
+
+if filereadable(expand("~/.vimrc.bundles"))
+  source ~/.vimrc.bundles
+endif
+
 syntax on
 set nocompatible
 set clipboard=unnamed 	" yank and paste with the system clipboard
@@ -8,12 +17,16 @@ filetype plugin indent on
 let g:airline_powerline_fonts = 1
 
 " Editing preferences
+set autoindent
 set autoread		" reload files when changed on disk, i.e. via `git checkout` 
 set encoding=utf-8	" encoding preference
 set expandtab		" expand tabs to spaces
 set smartcase 		" case-sensitive search if any caps
 set softtabstop=2 	" insert mode tab and backspace use 2 spaces
-set tabstop=8 		" actual tabs occupy 8 characters
+set tabstop=2 		" actual tabs occupy 8 characters
+set shiftwidth=2
+set wildmenu " show a navigable menu for tab completion
+set wildmode=longest,list,full
 set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*.pyc,*/node_modules,*/bower_components  " ignores misc. files
 
 " Searching preferences

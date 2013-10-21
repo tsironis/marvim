@@ -16,3 +16,9 @@
 [submodule "vim/bundle/minibufexpl"]
   path = vim/bundle/minibufexpl
   url = git@github.com:fholgado/minibufexpl.vim.git
+[submodule "vim/bundle/coffeescript"]
+  path = vim/bundle/coffeescript
+  url = git@github.com:kchmck/vim-coffee-script.git
+[submodule "vim/bundle/multiple-cursors"]
+  path = vim/bundle/multiple-cursors
+  url = git@github.com:terryma/vim-multiple-cursors.git
