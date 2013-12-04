@@ -28,6 +28,7 @@ set shiftwidth=2
 set wildmenu " show a navigable menu for tab completion
 set wildmode=longest,list,full
 set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*.pyc,*/node_modules,*/bower_components  " ignores misc. files
+set hidden
 
 " Searching preferences
 set ignorecase		" case-insensitive search
@@ -55,6 +56,10 @@ nnoremap N Nzzzv
 nnoremap <C-a> :b
 nnoremap ; :
 map <silent> <leader>V :source ~/.vimrc<CR>:filetype detect<CR>:exe ":echo 'vimrc reloaded'"<CR>
+
+" md is markdown
+autocmd BufRead,BufNewFile *.md set filetype=markdown
+autocmd BufNewFile,BufRead *.{md,mdown,mkd,mkdn,markdown,mdwn} source ~/.vim/bundle/iavim/iavim.vim
 
 " Swap settings
 set directory-=.
