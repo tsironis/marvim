@@ -16,6 +16,26 @@ def link_file(original_filename, symlink_filename)
   end
   ln_s original_path, symlink_path, :verbose => true
 end
+def get_backup_path(path)
+  number = 1
+  backup_path = "#{path}.bak"
+  loop do
+    if number > 1
+      backup_path = "#{backup_path}#{number}"
+    end
+    if File.exists?(backup_path) || File.symlink?(backup_path)
+      number += 1
+      next
+    end
+    break
+  end
+  backup_path
+end
+def install_github_bundle(user, package)
+  unless File.exist? File.expand_path("~/.vim/bundle/#{package}")
+    sh "git clone https://github.com/#{user}/#{package} ~/.vim/bundle/#{package}"
+  end
+end
 def step(description) 
   description = "-- #{description} " 
   description = description.ljust(80, '-') 
@@ -28,4 +48,6 @@ task :default do
   link_file 'vim'                   , '~/.vim'
   link_file 'vimrc'                 , '~/.vimrc'
   link_file 'vimrc.bundles'         , '~/.vimrc.bundles'
+  install_github_bundle 'gmarik','vundle'
+  sh 'vim -c "BundleInstall" -c "q" -c "q"'
 end
