@@ -59,7 +59,6 @@ map <silent> <leader>V :source ~/.vimrc<CR>:filetype detect<CR>:exe ":echo 'vimr
 
 " md is markdown
 autocmd BufRead,BufNewFile *.md set filetype=markdown
-autocmd BufNewFile,BufRead *.{md,mdown,mkd,mkdn,markdown,mdwn} source ~/.vim/bundle/iavim/iavim.vim
 
 " Swap settings
 set directory-=.
