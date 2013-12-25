@@ -7,6 +7,9 @@ Bundle 'gmarik/vundle'
 if filereadable(expand("~/.vimrc.bundles"))
   source ~/.vimrc.bundles
 endif
+if filereadable(expand("~/.vimrc.bundles.local"))
+  source ~/.vimrc.bundles.local
+endif
 
 syntax on
 set nocompatible

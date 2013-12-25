@@ -48,6 +48,7 @@ task :default do
   link_file 'vim'                   , '~/.vim'
   link_file 'vimrc'                 , '~/.vimrc'
   link_file 'vimrc.bundles'         , '~/.vimrc.bundles'
+  link_file 'vimrc.bundles.local'   , '~/.vimrc.bundles.local'
   install_github_bundle 'gmarik','vundle'
   sh 'vim -c "BundleInstall" -c "q" -c "q"'
 end
